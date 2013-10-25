@@ -1,6 +1,6 @@
 Documentación
 =============
-#Funcionamiento de Grid System en Bootstrap 3 y clases responsive
+*Funcionamiento de Grid System en Bootstrap 3 y clases responsive
 
 Grid Clases: 
 		
