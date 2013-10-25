@@ -2,15 +2,136 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Renier Chico</title>
+	<title>Grid System Bootstrap 3</title>
 <!-- Style css -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="bootstrap/css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic|Actor' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	
+	<!-- Grid Clases: 
+		
+		 .container: wrapper for all your rows 
+			  (Envuelve todas las columnas)
+
+		 .row: Contains all your column classes [xs,sm,md,lg]
+			  (Contiene a todas las columnas y sus clases)
+
+		 .col.##-##: the sizes of the column in your row 
+		 	  (Definición de los tamaños de columnas dentro de las filas) 
+
+		 
+		 Ordering Classes:(solo funciona con md y lg screens)
+
+		 		.col-##-push-##: Pushes your columns
+				.col-##-pull-##: Pull your columns	
+		 
+
+		 Offset Class:(solo funciona con md and lg screen)
+
+		 		.col-##-offset-##: Moves your columns depending what the column is offset by.
+
+		 Responsive Utility Classes: 
+		 		They  hide and show content on your screen dependig on which you device style for.
+		 		(Se muestra u oculta el contenido dependiendo del estilo aplicado al dispositivo)
+
+		 		.visible-##: Your content will only be visibles an that screen size
+		 		.hidden-##: Your content will only be hidden on that screen size
+
+	-->
+
+
+	<div class="container">
+
+<!-- Aplicando clase Visible a los titulos -->
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 class="visible-xs">
+					visible-Extra Small Screen[.col-xs-12]
+				</h1>
+				<h2 class="visible-sm">
+					visible-Small Screen[.col-xs-12]
+				</h2>
+				<h3 class="visible-md">
+					visible-Medium Screen[.col-xs-12]
+				</h3>
+				<h4 class="visible-lg">
+					visible-Large Screen[.col-xs-12]
+				</h4>
+			</div>
+		</div>
+
+
+
+<!-- Aplicando clase lg para adaptar columnas a Large Screen sin perder la adaptacion a Extra Small Screen-->
+
+		<div class="row">
+			<div class="col-xs-6 col-lg-4">
+				.col-lg-4 .col-xs-6</div>
+			<div class="col-xs-6 col-lg-8">
+				.col-lg-8 .col-xs-6</div>
+		</div>
+
+
+
+<!-- Aplicando clase sm para adaptar columnas en Medium Screen -->
+
+<!-- Prueba aplicando la clase Hidden para desaparecer filas para Extra Small screen-->
+
+		<div class="row hidden-xs">
+
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-xs-4">
+						[col-sm-6(.col-xs-4)]</div>
+					<div class="col-xs-8">
+						[col.sm-6(.col-xs-8)]</div>
+				</div>
+			</div>
+
+<!-- Ordenando Columnas con las clases Push y Pull para adaptarde a Medium Screen(swap position) -->
+
+
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-xs-4 col-md-push-8">
+						[col-sm-6(.col-xs-4)]</div>
+					<div class="col-xs-8 col-md-pull-4">
+						[col.sm-6(.col-xs-8)]</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+<!-- Utilizando la Clase sm para adaptar las columnas de 12 en xs a 4 en sm. Por ser first mobile no se pierde la adaptacion a Extra Small-->
+
+		<div class="row footer">
+
+				<div class="col-sm-4">
+					.col-xs-12 .col-sm-4 </div>
+				
+				<div class="col-sm-4">
+					.col-xs-12 .col-sm-4</div>
+				
+				<div class="col-sm-4">
+					.col-xs-12 .col-sm-4</div>
+		
+		</div>
+
+<!-- Aplicanto Offset Class con Panel -->
+
+		<div class="row">
+			<div class="col-md-4 col-md-offset-8 panel">
+				.col-md-4 col-md-offset-4 panel	
+			</div>
+		</div>
+	</div>
+
+
+
+
 </body>
 <!-- Link js -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
