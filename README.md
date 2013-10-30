@@ -2,7 +2,7 @@ Documentación
 =============
 **Funcionamiento de Grid System en Bootstrap 3 y clases responsive**
 
-Grid Clases:
+Grid Classes:
 ------------
 		
 		 .container: wrapper for all your rows 
